@@ -20,6 +20,11 @@ describe MotivationRatings do
 
     describe '#remove_motivation' do
       it {is_expected.to respond_to(:remove_motivation_rating).with(1).argument }
+      
+      it 'the remove_motivation method removes a rating from the ratings array' do
+        subject.remove_motivation_rating(5)
+        expect(subject.ratings).to be_empty
+      end
     
     end 
 
