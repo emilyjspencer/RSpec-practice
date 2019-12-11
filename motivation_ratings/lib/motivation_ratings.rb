@@ -11,6 +11,7 @@ class MotivationRatings
   end 
 
   def remove_motivation_rating(rating)
+    @ratings.delete(rating)
   end 
 
  

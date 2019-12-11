@@ -25,6 +25,15 @@ describe MotivationRatings do
         subject.remove_motivation_rating(5)
         expect(subject.ratings).to be_empty
       end
+
+      it 'the remove_motivation method removes a rating from the ratings array if there is more than one rating in array' do
+        subject.add_motivation_rating(10)
+        subject.add_motivation_rating(8)
+        subject.add_motivation_rating(7)
+        subject.remove_motivation_rating(7)
+        expect(subject.ratings).to eq [10, 8]
+      end 
+        
     
     end 
 
