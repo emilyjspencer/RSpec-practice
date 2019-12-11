@@ -10,6 +10,9 @@ class MotivationRatings
     @ratings.push(rating)
   end 
 
+  def remove_motivation_rating(rating)
+  end 
+
  
 
 end 
