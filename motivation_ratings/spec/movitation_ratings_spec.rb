@@ -33,8 +33,10 @@ describe MotivationRatings do
         subject.remove_motivation_rating(7)
         expect(subject.ratings).to eq [10, 8]
       end 
-        
-    
+    end 
+
+    describe '#calculate_average_rating' do
+      it {is_expected.to respond_to(:calculate_average_rating) } 
     end 
 
 end 

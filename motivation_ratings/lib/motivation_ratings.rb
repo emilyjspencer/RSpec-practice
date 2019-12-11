@@ -14,6 +14,9 @@ class MotivationRatings
     @ratings.delete(rating)
   end 
 
+  def calculate_average_rating
+  end 
+
  
 
 end 
