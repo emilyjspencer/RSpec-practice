@@ -8,6 +8,8 @@ RSpec.describe 'a random double' do
   end  
 end 
 
+# The above test is more set in stone. Stubbing at the point of creation 
+
 #=>
 
 # Our test now passes because the double knows how to respond to the fly_through_air and scale_building methods 
