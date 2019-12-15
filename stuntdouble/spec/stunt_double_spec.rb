@@ -14,6 +14,17 @@ end
 # The above example uses the shorthand syntax
 # We could also write the test in the following way:
 
+RSpec.describe ' a random double' do
+  it 'only allows defined methods to be invoked' do
+    stunt_double = double("Angelina Jolie")
+    allow(stunt_double).to receive_messages(fly_through_air: "Whooosh", scale_building: "Awesome")
+    stunt_double.fly_through_air
+    stunt_double.scale_building
+    expect(stunt_double.scale_building).to eq "Awesome"
+    expect(stunt_double.fly_through_air).to eq "Whooosh"
+  end
+end 
+
 RSpec.describe 'a random double' do
   it 'only allows defined methods to be invoked' do
     stunt_double = double("Angelina Jolie")
