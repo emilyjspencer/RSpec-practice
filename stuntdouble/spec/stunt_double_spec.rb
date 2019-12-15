@@ -11,4 +11,28 @@ end
 #=>
 
 # Our test now passes because the double knows how to respond to the fly_through_air and scale_building methods 
+# The above example uses the shorthand syntax
+# We could also write the test in the following way:
+
+RSpec.describe 'a random double' do
+  it 'only allows defined methods to be invoked' do
+    stunt_double = double("Angelina Jolie")
+    allow(stunt_double).to receive(:fly_through_air).and_return "Whoooosh"
+    allow(stunt_double).to receive(:scale_building).and_return "Awesome"
+    expect(stunt_double.fly_through_air).to eq "Whoooosh"
+    expect(stunt_double.scale_building).to eq "Awesome"
+  end
+end 
+
+# The other alternative is this = very similar to above:
+
+RSpec.describe 'a random double' do
+  it 'only allows defined methods to be invokved' do
+    stunt_double = double("Angelina Jolie")
+    allow(stunt_double).to receive(:fly_through_air) { "Whoooosh"}
+    allow(stunt_double).to receive(:scale_building) { "Awesome"}
+    expect(stunt_double.fly_through_air).to eq "Whoooosh"
+    expect(stunt_double.scale_building).to eq "Awesome"
+  end
+end 
 
