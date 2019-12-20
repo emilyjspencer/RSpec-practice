@@ -1,4 +1,4 @@
-class Movie
+class Ratings
   
 
   def rate(movie) # movie is a double 
