@@ -16,6 +16,6 @@ class Movie
   end
 end
 
-actor = Actor.new("Meryl Streep")
+actor = Actor.new("Angelina Jolie")
 movie = Movie.new(actor)
 puts movie.start_shooting
