@@ -1,6 +1,6 @@
 # mimic or mock a real life object
 
-RSpec.describe 'friends' do
+RSpec.describe 'Friends' do
   it 'can return multiple return values in sequence' do
    array = ["Phoebe", "Monica", "Rachel", "Chandler", "Joey", "Ross"]
    mock_array = double
@@ -14,3 +14,26 @@ RSpec.describe 'friends' do
    expect(mock_array.pop).to be_nil 
   end
 end 
+
+# array = ["Phoebe", "Monica", "Rachel", "Chandler", "Joey", "Ross"]
+
+  # print array
+  # puts ""
+  # puts array.pop
+  # puts array.pop
+  # puts array.pop
+  # puts array.pop
+  # puts array.pop
+  # puts array.pop
+  # puts array.inspect 
+
+  #=>
+
+  # ["Phoebe", "Monica", "Rachel", "Chandler", "Joey", "Ross"]
+# Ross
+# Joey
+# Chandler
+# Rachel
+# Monica
+# Phoebe
+# []
